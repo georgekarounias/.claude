@@ -1,6 +1,6 @@
 ---
 name: react-browser-api-best-practices
-description: Use built-in browser APIs such as IntersectionObserver, View Transitions, Clipboard, Web Share, BroadcastChannel, and Web Locks instead of extra dependencies or hand-rolled JavaScript. Use this whenever implementing browser capabilities, cross-tab coordination, file access, sharing, scheduling, or performance-sensitive UI behavior.
+description: Skill for React and browser capability guidance covering native browser APIs such as IntersectionObserver, View Transitions, Clipboard, Web Share, BroadcastChannel, and Web Locks. Use this when implementing browser capabilities, cross-tab coordination, file access, sharing, scheduling, or performance-sensitive UI behavior.
 ---
 
 # Using Modern Browser APIs

@@ -1,6 +1,6 @@
 ---
 name: dotnet-redis-caching-best-practices
-description: Best practices for caching and in-memory data stores like Redis — caching patterns, invalidation, key and TTL design, stampede protection, serialization, eviction, resilience, and security. Use this whenever adding or reviewing caching, introducing Redis or a distributed cache, deciding what/when to cache, designing cache keys or expiry, or debugging stale data, cache stampedes, or memory issues. Trigger even when the user just says "cache this", "add Redis", or "speed this up with a cache" without mentioning best practices. Includes .NET (IDistributedCache / StackExchange.Redis / HybridCache) guidance.
+description: Skill for .NET and Redis caching guidance covering cache patterns, invalidation, key design, TTLs, stampede protection, serialization, eviction, resilience, and security. Use this when adding or reviewing caching, introducing Redis or a distributed cache, deciding what to cache, designing cache keys or expiry, or debugging stale-data and cache-stampede issues.
 ---
 
 # Caching & Redis Best Practices

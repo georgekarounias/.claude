@@ -1,6 +1,6 @@
 ---
 name: dotnet-efcore-migration-best-practices
-description: Best practices for creating, reviewing, and applying Entity Framework Core migrations safely. Use this whenever a change touches entity models, the DbContext, or the database schema — adding/removing/renaming columns or tables, changing types or nullability, adding indexes or constraints, generating or editing a migration, or planning how to deploy a schema change. Trigger even when the user just says "add a column", "change the model", or "create a migration" without mentioning safety. Covers reversibility, avoiding data loss, zero-downtime deploys, and team workflow.
+description: Skill for safe EF Core migrations covering scaffolding, review, reversibility, data-loss avoidance, zero-downtime deployment strategy, and team workflow. Use this when a change touches entity models, the DbContext, or the database schema, or when creating, editing, reviewing, or deploying a migration.
 ---
 
 # EF Core Migration Best Practices

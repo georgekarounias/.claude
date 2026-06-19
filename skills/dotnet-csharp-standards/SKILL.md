@@ -1,6 +1,6 @@
 ---
 name: dotnet-csharp-standards
-description: C# and .NET coding conventions for services, handlers, domain logic, APIs, async code, dependency injection, nullability, error handling, logging, and testing. Use this whenever writing or reviewing C# files, refactoring backend logic, fixing analyzer warnings, improving async correctness, or removing unsafe patterns in .NET code.
+description: Skill for C# and .NET coding standards covering services, handlers, domain logic, APIs, async code, dependency injection, nullability, error handling, logging, and testing. Use this when writing or reviewing C# files, refactoring backend logic, fixing analyzer warnings, improving async correctness, or removing unsafe patterns in .NET code.
 ---
 
 # Clean C# and .NET

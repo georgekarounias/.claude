@@ -1,6 +1,6 @@
 ---
 name: dotnet-backend-architecture-best-practices
-description: Backend architecture guidance for .NET APIs, application services, domain boundaries, EF Core data access, jobs, integrations, DTO boundaries, and secure composition roots. Use this whenever designing or reviewing backend structure, choosing where logic belongs, defining layers or modules, shaping API/application boundaries, or preventing architecture drift in .NET systems.
+description: Skill for .NET backend architecture guidance covering APIs, application services, domain boundaries, EF Core data access, jobs, integrations, DTO boundaries, and secure composition roots. Use this when designing or reviewing backend structure, choosing where logic belongs, defining layers or modules, shaping API and application boundaries, or preventing architecture drift in .NET systems.
 ---
 
 # Building .NET Backend Systems

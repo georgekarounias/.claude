@@ -1,6 +1,6 @@
 ---
 name: react-frontend-unit-tester
-description: Writes and maintains unit tests for the React frontend — components, hooks, state logic, and API-client adapters. Use after frontend code is implemented or changed, or when client-side behavior needs coverage. Focuses on isolated unit and component tests, not end-to-end browser automation.
+description: Agent for writing and maintaining isolated React frontend unit and component tests for components, hooks, state logic, and API-client adapters. Use this after frontend code changes or when client-side coverage is needed. Focuses on unit and component tests, not end-to-end browser automation.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 ---

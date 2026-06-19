@@ -1,6 +1,6 @@
 ---
 name: dotnet-rabbitmq-message-queue-best-practices
-description: Best practices for message queues and asynchronous messaging like RabbitMQ — delivery guarantees, idempotent consumers, acknowledgements, retries and dead-lettering, message design, durability, ordering, backpressure, and the transactional outbox. Use this whenever adding or reviewing async messaging, introducing RabbitMQ or another broker, designing producers/consumers, queues/exchanges/routing, or debugging lost, duplicated, stuck, or out-of-order messages. Trigger even when the user just says "publish an event", "add a queue", "process this in the background", or "use RabbitMQ" without mentioning best practices. Includes .NET (RabbitMQ.Client / MassTransit) guidance.
+description: Skill for .NET and RabbitMQ messaging guidance covering delivery guarantees, idempotent consumers, acknowledgements, retries, dead-lettering, message contracts, durability, ordering, backpressure, and the transactional outbox. Use this when adding or reviewing async messaging, introducing RabbitMQ, designing producers or consumers, or debugging lost, duplicated, stuck, or out-of-order messages.
 ---
 
 # Message Queue & RabbitMQ Best Practices

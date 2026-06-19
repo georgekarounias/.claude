@@ -1,6 +1,6 @@
 ---
 name: dotnet-webapi-security-best-practices
-description: Security conventions and best practices for building and reviewing ASP.NET Core (.NET / C#) Web APIs. Use this whenever writing, generating, reviewing, or refactoring backend API code that touches authentication, authorization, input handling, data exposure, secrets, CORS, transport security, rate limiting, or error handling — even when the user just says "add an endpoint", "secure this API", or "review this controller" without explicitly mentioning security. Organized around the OWASP API Security Top 10 with concrete ASP.NET Core patterns.
+description: Skill for ASP.NET Core Web API security covering authentication, authorization, input handling, data exposure, secrets, CORS, transport security, rate limiting, and error handling. Use this when writing, generating, reviewing, or refactoring backend API code with security-sensitive behavior.
 ---
 
 # ASP.NET Core Web API Security

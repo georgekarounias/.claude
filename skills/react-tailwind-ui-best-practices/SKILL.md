@@ -1,6 +1,6 @@
 ---
 name: react-tailwind-ui-best-practices
-description: Tailwind CSS conventions for utility-first styling, responsive layouts, variants, theming, and extracting reusable UI patterns. Use this whenever adding or reviewing Tailwind classes, utility-heavy component styling, responsive behavior, or design-system utility patterns.
+description: Skill for React and Tailwind UI guidance covering utility-first styling, responsive layouts, variants, theming, and reusable UI patterns. Use this when adding or reviewing Tailwind classes, utility-heavy component styling, responsive behavior, or design-system utility patterns.
 ---
 
 # Tailwind CSS Best Practices

@@ -1,6 +1,6 @@
 ---
 name: dotnet-efcore-schema-designer
-description: Designs relational database schemas and EF Core entity models — tables, keys, relationships, data types, constraints, indexes, and ERD-level structure. Use when the user asks to model data, design tables, add or reshape entities, choose keys or relationships, define SQL DDL, or review schema design. Produces a schema design (entities + SQL DDL + rationale); hands the actual migration off to the dotnet-efcore-migrations agent and does not apply changes to a database.
+description: Agent for designing relational database schemas and EF Core entity models for .NET applications, including tables, keys, relationships, constraints, indexes, and SQL DDL. Use this when modeling data, designing tables, adding or reshaping entities, choosing keys or relationships, defining SQL DDL, or reviewing schema design. Produces a schema design and hands migration work to dotnet-efcore-migrations.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 ---

@@ -1,6 +1,6 @@
 ---
 name: react-web-security-best-practices
-description: Frontend and web security guidance for XSS, untrusted HTML, token handling, storage choices, CSP, CORS boundaries, and dependency risk. Use this whenever rendering user content, handling auth tokens, adding browser-side security-sensitive behavior, or reviewing the security of React/web code.
+description: Skill for React and web security guidance covering XSS, untrusted HTML, token handling, storage choices, CSP, CORS boundaries, and dependency risk. Use this when rendering user content, handling auth tokens, adding browser-side security-sensitive behavior, or reviewing frontend security.
 ---
 
 # Web Security

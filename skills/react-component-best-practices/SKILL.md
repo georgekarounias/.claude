@@ -1,6 +1,6 @@
 ---
 name: react-component-best-practices
-description: React component conventions for modern function components, state derivation, composition, accessibility, and predictable rendering. Use this whenever building or reviewing React components, hooks, client-side UI behavior, or effect-heavy code that may not need `useEffect`.
+description: Skill for React component guidance covering function components, state derivation, composition, accessibility, and predictable rendering. Use this when building or reviewing React components, hooks, client-side UI behavior, or effect-heavy code that may not need useEffect.
 ---
 
 # Writing React Components

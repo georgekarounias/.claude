@@ -1,6 +1,6 @@
 ---
 name: dotnet-backend-unit-tester
-description: Writes and maintains unit tests for the .NET backend — services, business logic, validators, and handlers. Use after backend code is implemented or changed, or when test coverage for server-side logic is requested. Focuses on isolated unit tests, not integration or end-to-end tests.
+description: Agent for writing and maintaining isolated .NET backend unit tests for services, business logic, validators, and handlers. Use this after backend code changes or when server-side test coverage is needed. Focuses on unit tests, not integration or end-to-end tests.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 ---

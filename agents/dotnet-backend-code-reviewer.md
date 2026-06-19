@@ -1,6 +1,6 @@
 ---
 name: dotnet-backend-code-reviewer
-description: Reviews .NET backend code changes for correctness, data safety, security, performance, and architectural fit. Use after backend code is written or modified, before merging or committing backend changes. Read-only — reports findings, does not change code.
+description: Agent for reviewing .NET backend code changes for correctness, data safety, security, performance, and architectural fit. Use this after backend code is written or modified, before merging or committing backend changes. Read-only — reports findings and does not change code.
 tools: Read, Grep, Glob, Bash
 model: opus
 ---

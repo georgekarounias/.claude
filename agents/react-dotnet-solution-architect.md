@@ -1,6 +1,6 @@
 ---
 name: react-dotnet-solution-architect
-description: Designs implementation plans and technical decisions for React + .NET features, larger refactors, data models, caching, messaging, and integrations. Use before implementation when API contracts, module boundaries, schema changes, state ownership, library choices, or other non-trivial design decisions need to be made. For local behavior-preserving cleanup without open design questions, use react-dotnet-refactor-specialist instead. Produces `architecture-plan.md` or an ADR with phased execution guidance; does not modify source code.
+description: Agent for designing implementation plans and technical decisions across React + .NET features, larger refactors, data models, caching, messaging, and integrations. Use this before implementation when API contracts, module boundaries, schema changes, state ownership, library choices, or other non-trivial design decisions must be made. For local behavior-preserving cleanup without open design questions, use react-dotnet-refactor-specialist instead. Produces `architecture-plan.md` or an ADR and does not modify source code.
 tools: Read, Grep, Glob, WebSearch, WebFetch, Write
 model: opus
 ---

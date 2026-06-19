@@ -1,6 +1,6 @@
 ---
 name: react-typescript-standards
-description: TypeScript conventions for React and frontend code: typing props, API models, function signatures, nullability, unions, and safe narrowing. Use this whenever writing or reviewing TypeScript files, refactoring types, fixing type errors, or removing unsafe `any` and casts.
+description: Skill for React-oriented TypeScript standards covering props, API models, function signatures, nullability, unions, and safe narrowing. Use this when writing or reviewing TypeScript files, refactoring types, fixing type errors, or removing unsafe any and casts.
 ---
 
 # Clean TypeScript

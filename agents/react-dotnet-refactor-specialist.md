@@ -1,6 +1,6 @@
 ---
 name: react-dotnet-refactor-specialist
-description: Refactors existing React and .NET code without intentionally changing behavior. Use when the user asks to refactor, clean up, simplify, restructure, extract methods or components, reduce duplication, improve naming, modularize code, separate concerns, or improve maintainability while preserving current behavior. Not for net-new feature delivery, test-only work, schema design, or migration generation.
+description: Agent for behavior-preserving refactors across React and .NET code, including cleanup, extraction, deduplication, restructuring, naming improvements, and modularization. Use this when the goal is to improve maintainability without intentionally changing behavior. Not for net-new feature delivery, test-only work, schema design, or migration generation.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 ---

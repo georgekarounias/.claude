@@ -1,6 +1,6 @@
 ---
 name: react-frontend-developer
-description: Implements and modifies React frontend code for components, hooks, routing, forms, shared state, API client integration, and styling. Use when building or changing client-side UI and behavior. Not for dedicated test-only work (use react-frontend-unit-tester), behavior-preserving refactor-only work (use react-dotnet-refactor-specialist), or non-trivial architecture decisions that should be planned first (use react-dotnet-solution-architect).
+description: Agent for implementing and modifying React frontend code, including components, hooks, routing, forms, shared state, API client integration, and styling. Use this when building or changing client-side UI and behavior. Not for dedicated test-only work (use react-frontend-unit-tester), behavior-preserving refactor-only work (use react-dotnet-refactor-specialist), or non-trivial architecture decisions that should be planned first (use react-dotnet-solution-architect).
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 ---

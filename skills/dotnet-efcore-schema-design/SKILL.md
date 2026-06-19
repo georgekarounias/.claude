@@ -1,6 +1,6 @@
 ---
 name: dotnet-efcore-schema-design
-description: Best practices for designing relational database schemas — tables, keys, relationships, data types, constraints, indexes, and naming. Use this whenever modeling new data, adding or reshaping tables/columns, choosing keys or relationships, picking data types, or reviewing a schema or EF Core entity model. Trigger even when the user just says "model this", "design the tables", "add an entity", or "what columns should this have", without explicitly mentioning schema design. Focused on relational design (SQL Server / PostgreSQL) and how it maps to EF Core.
+description: Skill for EF Core-oriented relational schema design covering tables, keys, relationships, data types, constraints, indexes, and naming. Use this when modeling data, reshaping tables or entities, choosing keys or relationships, picking data types, or reviewing a database schema or EF Core entity model.
 ---
 
 # Database Schema Design Best Practices

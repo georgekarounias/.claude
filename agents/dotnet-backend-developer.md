@@ -1,6 +1,6 @@
 ---
 name: dotnet-backend-developer
-description: Implements and modifies .NET backend code for APIs, services, handlers, business rules, EF Core queries, DI registration, background-job orchestration, and configuration. Use when building or changing server-side functionality. Not for dedicated test-only work (use dotnet-backend-unit-tester), behavior-preserving refactor-only work (use react-dotnet-refactor-specialist), schema design (use dotnet-efcore-schema-designer), or EF migration generation/review (use dotnet-efcore-migrations).
+description: Agent for implementing and modifying .NET backend code, including APIs, services, handlers, business rules, EF Core queries, DI registration, background-job orchestration, and configuration. Use this when building or changing server-side functionality. Not for dedicated test-only work (use dotnet-backend-unit-tester), behavior-preserving refactor-only work (use react-dotnet-refactor-specialist), schema design (use dotnet-efcore-schema-designer), or EF migration generation/review (use dotnet-efcore-migrations).
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 ---

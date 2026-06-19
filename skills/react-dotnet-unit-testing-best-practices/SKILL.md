@@ -1,6 +1,6 @@
 ---
 name: react-dotnet-unit-testing-best-practices
-description: Unit-testing guidance for .NET and React covering what to test, how to structure tests, naming, mocking boundaries, deterministic setup, and common xUnit/Vitest plus Testing Library patterns. Use this whenever the user asks to add tests, cover a bug, write a unit test, improve coverage, refactor tests, or review whether test cases are sufficient.
+description: Skill for React and .NET unit-testing guidance covering test selection, structure, naming, mocking boundaries, deterministic setup, and common xUnit, Vitest, and Testing Library patterns. Use this when adding tests, covering a bug, writing a unit test, improving coverage, refactoring tests, or reviewing whether test cases are sufficient.
 ---
 
 # Unit Testing Best Practices

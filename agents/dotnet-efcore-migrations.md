@@ -1,6 +1,6 @@
 ---
 name: dotnet-efcore-migrations
-description: Handles EF Core migration work — generating, editing, and reviewing migrations plus safe schema evolution steps. Use when the user asks to create a migration, update the DbContext model, rename columns or tables, change nullability or indexes, or turn an approved schema change into a safe migration. Not for greenfield schema design; use dotnet-efcore-schema-designer first when the data model itself is still being designed.
+description: Agent for generating, editing, and reviewing EF Core migrations and safe schema-evolution steps in .NET projects. Use this when creating a migration, updating the DbContext model, renaming columns or tables, changing nullability or indexes, or turning an approved schema change into a safe migration. Not for greenfield schema design; use dotnet-efcore-schema-designer first when the data model itself is still being designed.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 ---

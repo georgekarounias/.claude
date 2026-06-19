@@ -1,6 +1,6 @@
 ---
 name: react-frontend-code-reviewer
-description: Reviews React frontend code changes for correctness, accessibility, performance, type safety, and security. Use after frontend code is written or modified, before merging or committing frontend changes. Read-only — reports findings, does not change code.
+description: Agent for reviewing React frontend code changes for correctness, accessibility, performance, type safety, and security. Use this after frontend code is written or modified, before merging or committing frontend changes. Read-only — reports findings and does not change code.
 tools: Read, Grep, Glob, Bash
 model: sonnet
 ---
