@@ -39,4 +39,4 @@ Return a prioritized list grouped by severity:
 - **Warning** — performance, design, or convention issues (should fix)
 - **Nit** — style/readability (optional)
 
-For each finding give the file and line, a one-line explanation, and a concrete suggested fix. If nothing is wrong, say so plainly. End with a **Recommended next agent** line when useful, usually `backend-developer` for fixes or `backend-unit-tester` when the main gap is missing coverage. Do not edit any files.
+For each finding give the file and line, a one-line explanation, and a concrete suggested fix. If nothing is wrong, say so plainly. End with a **Recommended next agent** line when useful, usually `backend-developer` for behavior or correctness fixes, `refactor-specialist` for structure-only cleanup, or `backend-unit-tester` when the main gap is missing coverage. Do not edit any files.
