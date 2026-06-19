@@ -1,6 +1,6 @@
 ---
 name: agent-handoff-evidence-best-practices
-description: Skill for coordinating multi-agent work with durable routing, handoff, review, and test evidence files. Use this when a task needs to be triaged before implementation, handed from one specialist to another, or recorded with concrete validation and review evidence instead of relying only on chat history.
+description: Route multi-agent work with durable handoff, review, and test artifacts. Use when a task spans specialists or needs reusable execution evidence beyond chat.
 ---
 
 # Agent Handoff And Evidence Best Practices
@@ -16,6 +16,12 @@ better established convention:
 - `review-findings.md`
 - `test-report.md`
 - `architecture-plan.md` or an ADR when architecture work is required
+
+## Example triggers
+
+- "Plan the agent sequence for this API and UI change and leave a durable handoff."
+- "Persist the review findings so another agent can fix them later."
+- "Write a test report for the coverage added in this task."
 
 ## Read Order
 

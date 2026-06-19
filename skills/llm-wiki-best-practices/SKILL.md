@@ -1,6 +1,6 @@
 ---
 name: llm-wiki-best-practices
-description: Skill for building and maintaining an LLM wiki with immutable raw sources, an LLM-owned interlinked markdown wiki, and schema-driven ingest, query, and lint workflows. Use this when scaffolding a git-backed or Obsidian-friendly knowledge base, ingesting new sources into durable pages, filing useful answers back into the wiki, or checking the wiki for contradictions, stale claims, duplicates, orphan pages, and missing cross-references.
+description: Build and maintain an LLM wiki with raw sources, durable markdown pages, and ingest, query, and lint workflows. Use for scaffold, source ingest, file-back, and wiki health checks.
 ---
 
 # LLM Wiki Best Practices
@@ -41,6 +41,12 @@ Available templates:
 
 These files are the default contract for scaffolding and for introducing new
 page types into a wiki.
+
+## Example triggers
+
+- "Create a git-backed wiki for due diligence research."
+- "Ingest this paper into the wiki and update related concept pages."
+- "Lint the wiki and write a report on contradictions, orphans, and stale claims."
 
 ## Default Structure
 
