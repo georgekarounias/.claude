@@ -24,6 +24,24 @@ An LLM wiki has three layers:
 The key distinction from basic RAG is persistence. The wiki is the compiled
 knowledge layer that sits between the human and the raw sources.
 
+## Starter Template Pack
+
+Use the template pack in `./.claude/skills/llm-wiki-best-practices/templates/`
+before inventing page shapes from scratch.
+
+Available templates:
+
+- `schema-template.md`
+- `source-page.md`
+- `entity-page.md`
+- `concept-page.md`
+- `query-page.md`
+- `tension-page.md`
+- `lint-report.md`
+
+These files are the default contract for scaffolding and for introducing new
+page types into a wiki.
+
 ## Default Structure
 
 Prefer a plain markdown and git-first setup unless scale or the user explicitly
@@ -41,6 +59,7 @@ Start with a minimal structure like:
 - `wiki/concepts/`
 - `wiki/queries/`
 - `wiki/reports/`
+- `wiki/tensions/` when contradictions or competing claims should be first-class
 - `wiki/SCHEMA.md`
 
 Only add specialized areas such as `wiki/tensions/`, `wiki/timelines/`,
@@ -49,6 +68,21 @@ actually needs them.
 
 If a repo already has `CLAUDE.md`, `AGENTS.md`, or another governing instruction
 file for the wiki, extend that instead of creating a competing contract.
+
+## Stable Identity Convention
+
+Do not rely on page titles alone for identity once the wiki becomes non-trivial.
+
+- Source pages use `source_id`.
+- Entity and concept pages use `canonical_id`.
+- Query pages use `query_id`.
+- Tension pages use `tension_id`.
+- Reports use `report_id`.
+- Use `aliases` when the same thing appears under more than one common name.
+
+If a non-trivial claim is likely to be repeated, contradicted, or revised across
+multiple pages, give it a stable inline marker such as `[claim:market-share-2026-q1]`.
+This makes deduplication and contradiction tracking more reliable than raw text search alone.
 
 ## Operating Modes
 
@@ -73,6 +107,9 @@ The schema should define:
 - when to update an existing page versus create a new page
 - how contradictions, stale claims, and open questions are represented
 
+Use `schema-template.md` as the starting point unless the repo already has a
+more specific schema contract.
+
 ### Ingest
 
 When adding a source:
@@ -84,6 +121,7 @@ When adding a source:
 5. Update `overview.md` when the source materially changes the evolving synthesis.
 6. Update `index.md`.
 7. Append a structured entry to `log.md`.
+8. If the source introduces an unresolved disagreement, create or update a page in `wiki/tensions/` instead of hiding the conflict in prose.
 
 A single source often changes many pages. That is normal if the edits are
 provenance-backed and precise.
@@ -95,7 +133,7 @@ When answering a question:
 1. Read `index.md` first.
 2. Read the smallest relevant set of pages.
 3. Answer from the wiki with clear page-level citations or source references when possible.
-4. If the result is durable, useful synthesis, file it back into the wiki instead of leaving it only in chat history.
+4. If the result is durable, useful synthesis, file it to `wiki/queries/YYYY-MM-DD-<slug>.md` instead of leaving it only in chat history.
 5. Update `index.md` and `log.md` when that new synthesis becomes part of the durable knowledge base.
 
 ### Lint And Repair
@@ -114,6 +152,44 @@ Periodically check the wiki for:
 Auto-fix low-risk structural issues. For ambiguous semantic conflicts, record
 the tension or produce a review report instead of silently overwriting content.
 
+## Canonical Page Requirements
+
+At minimum, durable pages should follow the template pack:
+
+- Source pages summarize one source, track provenance, and list the key entities, concepts, tensions, and claims drawn from that source.
+- Entity pages summarize one durable entity, list its key facts and relationships, and point back to relevant sources.
+- Concept pages summarize one durable concept, its core definition, key claims, related concepts, and tensions.
+- Query pages capture valuable answers that should compound in the knowledge base.
+- Tension pages hold unresolved contradictions or competing interpretations explicitly.
+
+If you deviate from the template, do it deliberately and document why in the schema.
+
+## Lint Contract
+
+A lint pass is not complete until it writes a durable report to
+`wiki/reports/lint-YYYY-MM-DD.md` using the lint-report template.
+
+Every lint pass should check at least the following:
+
+1. Required core files exist: `wiki/index.md`, `wiki/log.md`, and `wiki/overview.md`.
+2. Pages listed in `index.md` resolve to real files.
+3. Wikilinks are not obviously broken.
+4. There are no duplicate page titles, `canonical_id` values, or `source_id` values for the same concept.
+5. Durable pages include the expected `page_type` and stable ID fields.
+6. Source pages contain usable provenance.
+7. Entity, concept, and overview pages do not present durable unsupported claims as fact unless clearly labeled as synthesis, hypothesis, contradiction, or open question.
+8. Orphan pages are listed explicitly.
+9. Open tensions or superseded claims are listed explicitly.
+10. Stale pages that no longer reflect newer sources are flagged for review.
+
+The lint report should include:
+
+- a summary count of what was scanned and what was flagged
+- auto-fixes applied
+- issues requiring human review
+- missing pages or content gaps
+- suggested next sources or questions
+
 ## Provenance And Reliability
 
 - Treat raw sources as immutable.
@@ -121,6 +197,7 @@ the tension or produce a review report instead of silently overwriting content.
 - Do not present unsupported claims as settled fact.
 - Every durable claim should trace back to one or more sources or be clearly labeled as synthesis, hypothesis, contradiction, or open question.
 - Before writing a claim, grep for the existing claim, title, alias, wikilink, or citation.
+- Prefer updating or superseding an existing claim over duplicating it with slightly different wording.
 - Prefer updating canonical pages over scattering the same fact across multiple pages.
 - Preserve historical provenance when the current understanding changes.
 - Prefer append-only updates for logs and history sections.
@@ -135,6 +212,7 @@ the tension or produce a review report instead of silently overwriting content.
 - `overview.md` should be the evolving synthesis of the wiki, not a dump of raw notes.
 - Each durable page should make it easy to see what it is, why it matters, what it links to, and what supports it.
 - Use frontmatter only when it clearly helps navigation or tooling; do not overdesign metadata.
+- `wiki/tensions/` is the preferred home for unresolved contradictions that matter beyond one page.
 
 ## Concurrency And Maintenance
 
