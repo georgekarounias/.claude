@@ -11,7 +11,7 @@ These are the standards for unit tests in this codebase. A unit test verifies on
 
 **Test behavior, not implementation.** Assert on observable outcomes — return values, state the caller can see, calls to collaborators that matter. Do not assert on private fields, internal method call order, or anything a refactor would change without changing behavior. Tests coupled to implementation break constantly and discourage refactoring, which defeats their purpose.
 
-**One logical behavior per test.** A test should have a single reason to fail. Multiple unrelated assertions in one test make failures ambiguous and hide later assertions when an earlier one fails. Multiple assertions describing *one* outcome are fine.
+**One logical behavior per test.** A test should have a single reason to fail. Multiple unrelated assertions in one test make failures ambiguous and hide later assertions when an earlier one fails. Multiple assertions describing _one_ outcome are fine.
 
 **Make tests deterministic and isolated (the FIRST idea).** Tests must be Fast, Independent, Repeatable, Self-validating, and Timely. No test may depend on another test's state or on execution order. No real clock, randomness, network, filesystem, or database in a unit test — inject or fake those. A test that passes or fails depending on the day, the machine, or what ran before it is worse than no test.
 
@@ -34,12 +34,14 @@ These are the standards for unit tests in this codebase. A unit test verifies on
 Detect the existing setup first and match it: test framework (xUnit / NUnit / MSTest), mocking library (Moq / NSubstitute), and assertions (FluentAssertions or built-in). The patterns below assume **xUnit + Moq + FluentAssertions**; adapt if the project differs. Do not introduce a new framework into a project that already standardized on one.
 
 **Naming.** Use `Method_Scenario_ExpectedResult`.
+
 ```
 CalculateDiscount_WhenCartIsEmpty_ReturnsZero
 GetUser_WhenIdNotFound_ThrowsNotFoundException
 ```
 
 **Structure with AAA and FluentAssertions:**
+
 ```csharp
 [Fact]
 public void CalculateTotal_WithMultipleItems_SumsLineTotals()
@@ -57,6 +59,7 @@ public void CalculateTotal_WithMultipleItems_SumsLineTotals()
 ```
 
 **Parameterize input variations** with `[Theory]` + `[InlineData]` / `[MemberData]` instead of copy-pasting near-identical tests:
+
 ```csharp
 [Theory]
 [InlineData(0, 0)]
@@ -67,6 +70,7 @@ public void Discount_IsTenPercent(decimal subtotal, decimal expected) =>
 ```
 
 **Mock collaborators with Moq; verify only interactions that are part of the contract:**
+
 ```csharp
 var repo = new Mock<IUserRepository>();
 repo.Setup(r => r.GetByIdAsync(42)).ReturnsAsync(new User(42));
@@ -79,6 +83,7 @@ repo.Verify(r => r.GetByIdAsync(42), Times.Once); // only because "load exactly 
 ```
 
 **.NET specifics to get right:**
+
 - Test `async` methods with `async Task` (never `async void`) and `await` the call. Assert thrown exceptions with `await act.Should().ThrowAsync<T>()`.
 - Don't touch a real `DbContext` in a unit test. Test logic against mocked repositories/abstractions; save EF query behavior for integration tests.
 - Don't read `DateTime.Now`/`Guid.NewGuid()` directly in code under test — inject an abstraction (e.g. `TimeProvider`) so tests are deterministic.
@@ -94,16 +99,16 @@ Detect the existing setup first and match it: runner (Vitest / Jest) and library
 **Test from the user's perspective.** Query by accessible role, label, or text — what a user perceives — not by CSS classes, component internals, or `data-testid` (use `testid` only as a last resort). This keeps tests resilient to refactors and doubles as an accessibility check.
 
 ```tsx
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
-it('shows an error when submitting an empty email', async () => {
+it("shows an error when submitting an empty email", async () => {
   // Arrange
   render(<SignupForm />);
   const user = userEvent.setup();
 
   // Act
-  await user.click(screen.getByRole('button', { name: /sign up/i }));
+  await user.click(screen.getByRole("button", { name: /sign up/i }));
 
   // Assert
   expect(screen.getByText(/email is required/i)).toBeInTheDocument();
@@ -119,6 +124,7 @@ it('shows an error when submitting an empty email', async () => {
 **Test custom hooks in isolation** with `renderHook` when the logic is non-trivial; otherwise prefer testing the hook through a component that uses it.
 
 **React specifics to get right:**
+
 - Use `findBy*` / `waitFor` for anything async; never assert immediately after an action that updates state asynchronously.
 - Wrap interactions that cause state updates so there are no `act(...)` warnings — `user-event`'s async API handles this for you.
 - Keep each test's meaningful input (props, mocked responses) visible in the test body.

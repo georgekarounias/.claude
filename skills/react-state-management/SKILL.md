@@ -5,7 +5,7 @@ description: React state-management guidance for choosing between local state, U
 
 # Modern React State Management
 
-Most React state problems are really *categorization* problems: people put server data in Redux, or app state in Context, or global state where local would do — and then fight re-renders and stale data forever. The first and most important step is to identify **what kind of state** you have, because each kind has a different right tool. Reach for the least powerful option that works.
+Most React state problems are really _categorization_ problems: people put server data in Redux, or app state in Context, or global state where local would do — and then fight re-renders and stale data forever. The first and most important step is to identify **what kind of state** you have, because each kind has a different right tool. Reach for the least powerful option that works.
 
 ## Step 1: Categorize the state (this decides everything)
 
@@ -31,7 +31,7 @@ If state isn't shared, it doesn't need Context or Redux. **Colocate state with t
 Context is dependency injection for React, not a performance-optimized store.
 
 - **Use it for** values that change rarely and are read widely: theme, authenticated user, locale, configuration, service instances.
-- **The re-render trap:** every consumer re-renders when the context *value* changes. If the value is a new object every render, all consumers re-render constantly.
+- **The re-render trap:** every consumer re-renders when the context _value_ changes. If the value is a new object every render, all consumers re-render constantly.
   - **Memoize the value** with `useMemo` so its identity is stable.
   - **Split contexts** by update frequency/concern (e.g. separate `AuthContext` from `ThemeContext`, or separate state from dispatch) so a change in one doesn't re-render consumers of the other.
 - **Context + `useReducer`** is a clean pattern for modest shared state without Redux: hold state in a reducer, expose state and dispatch via two contexts.
@@ -46,7 +46,9 @@ export function Provider({ children }: PropsWithChildren) {
   const [state, dispatch] = useReducer(reducer, initial);
   return (
     <StateContext.Provider value={state}>
-      <DispatchContext.Provider value={dispatch}>{children}</DispatchContext.Provider>
+      <DispatchContext.Provider value={dispatch}>
+        {children}
+      </DispatchContext.Provider>
     </StateContext.Provider>
   );
 }
@@ -59,7 +61,7 @@ export function Provider({ children }: PropsWithChildren) {
 
 ```ts
 const cartSlice = createSlice({
-  name: 'cart',
+  name: "cart",
   initialState,
   reducers: {
     itemAdded(state, action: PayloadAction<Item>) {
@@ -125,4 +127,4 @@ export const { itemAdded } = cartSlice.actions;
 - `useSelector` selecting the whole store, or selectors returning fresh objects each call.
 - Duplicating URL state (filters, selected id) into Redux/Context.
 
-When unsure where state belongs, ask: *who needs it, how often does it change, and does the server own it?* The answers point to exactly one of useState, URL, Context, a data-fetching cache, or Redux — reach for the least powerful one that fits.
+When unsure where state belongs, ask: _who needs it, how often does it change, and does the server own it?_ The answers point to exactly one of useState, URL, Context, a data-fetching cache, or Redux — reach for the least powerful one that fits.
