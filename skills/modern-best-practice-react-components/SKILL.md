@@ -1,6 +1,6 @@
 ---
 name: modern-best-practice-react-components
-description: Build clean, modern React components that apply common best practices and avoid common pitfalls like unnecessary state management or useEffect usage
+description: React component conventions for modern function components, state derivation, composition, accessibility, and predictable rendering. Use this whenever building or reviewing React components, hooks, client-side UI behavior, or effect-heavy code that may not need `useEffect`.
 ---
 
 # Writing React Components

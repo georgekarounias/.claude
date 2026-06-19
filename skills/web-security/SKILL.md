@@ -1,6 +1,6 @@
 ---
 name: web-security
-description: Enforce web security and avoid security vulnerabilities
+description: Frontend and web security guidance for XSS, untrusted HTML, token handling, storage choices, CSP, CORS boundaries, and dependency risk. Use this whenever rendering user content, handling auth tokens, adding browser-side security-sensitive behavior, or reviewing the security of React/web code.
 ---
 
 # Web Security

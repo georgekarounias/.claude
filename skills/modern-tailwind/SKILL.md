@@ -1,6 +1,6 @@
 ---
 name: modern-tailwind
-description: Build clean, scalable UIs with Tailwind CSS using modern utilities and variants
+description: Tailwind CSS conventions for utility-first styling, responsive layouts, variants, theming, and extracting reusable UI patterns. Use this whenever adding or reviewing Tailwind classes, utility-heavy component styling, responsive behavior, or design-system utility patterns.
 ---
 
 # Tailwind CSS Best Practices

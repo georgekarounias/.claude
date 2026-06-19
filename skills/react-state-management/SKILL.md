@@ -1,6 +1,6 @@
 ---
 name: react-state-management
-description: Best practices for modern React state management — choosing between local state, Context, and Redux Toolkit, plus server-state caching (RTK Query / TanStack Query), selectors, performance, and structure. Use this whenever adding or reviewing state in a React app, deciding where state should live, introducing Redux or Context, reaching for a global store, fetching/caching server data, or debugging unnecessary re-renders or prop drilling. Trigger even when the user just says "manage this state", "add a context", "use Redux", or "share this across components" without mentioning best practices. Assumes modern React (function components, hooks) and Redux Toolkit, not legacy Redux.
+description: React state-management guidance for choosing between local state, URL state, Context, Redux Toolkit, Zustand-style shared state, and server-state caching with RTK Query or TanStack Query. Use this whenever adding or reviewing shared state, introducing Context or Redux, deciding where state should live, fetching/caching server data, or debugging prop drilling, stale data, or unnecessary re-renders.
 ---
 
 # Modern React State Management

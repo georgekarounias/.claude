@@ -1,6 +1,6 @@
 ---
 name: ef-migrations
-description: Handles EF Core database work — creating and reviewing migrations, schema/model changes, and ensuring safe, reversible data evolution. Use whenever a change touches entity models, the DbContext, or the database schema. Specialist in migration safety and data integrity.
+description: Handles EF Core migration work — generating, editing, and reviewing migrations plus safe schema evolution steps. Use when the user asks to create a migration, update the DbContext model, rename columns or tables, change nullability or indexes, or turn an approved schema change into a safe migration. Not for greenfield schema design; use sql-schema-designer first when the data model itself is still being designed.
 tools: Read, Write, Edit, Bash, Glob, Grep
 model: opus
 ---
@@ -25,3 +25,4 @@ Read ./.claude/skills/efcore-migration-best-practices/SKILL.md first for project
 - The migration files, plus a short summary: what changed, whether it's destructive, the rollback story, and any backfill/deploy-ordering notes.
 - Do NOT apply migrations to a real database (`database update`) unless explicitly asked. Recommend running it in a safe/dev environment first.
 - If the schema change implies code changes beyond the model, flag them for the backend-developer rather than implementing broad logic here.
+- End with a **Recommended next agent** line when useful: `backend-developer` for required model/code updates, `backend-code-reviewer` for a migration review pass, or `sql-schema-designer` if the requested schema shape is still unclear.

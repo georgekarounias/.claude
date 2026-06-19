@@ -1,6 +1,6 @@
 ---
-name: use-modern-browser-apis
-description: Utilize built-in browser APIs (like Popover API, View Transitions etc) instead of building features manually via JavaScript
+name: modern-browser-apis
+description: Use built-in browser APIs such as IntersectionObserver, View Transitions, Clipboard, Web Share, BroadcastChannel, and Web Locks instead of extra dependencies or hand-rolled JavaScript. Use this whenever implementing browser capabilities, cross-tab coordination, file access, sharing, scheduling, or performance-sensitive UI behavior.
 ---
 
 # Using Modern Browser APIs

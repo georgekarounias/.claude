@@ -1,6 +1,6 @@
 ---
 name: clean-typescript
-description: Write clean, efficient TypeScript code that follows common best practices
+description: TypeScript conventions for React and frontend code: typing props, API models, function signatures, nullability, unions, and safe narrowing. Use this whenever writing or reviewing TypeScript files, refactoring types, fixing type errors, or removing unsafe `any` and casts.
 ---
 
 # Clean TypeScript

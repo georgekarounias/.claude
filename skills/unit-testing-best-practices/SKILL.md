@@ -1,6 +1,6 @@
 ---
 name: unit-testing-best-practices
-description: Conventions and best practices for writing unit tests in this React + .NET codebase. Use this whenever writing, generating, reviewing, or refactoring unit tests — backend (.NET) or frontend (React) — even when the user just says "add tests", "write a test", or "cover this with tests" without mentioning best practices. Covers what to test, how to structure tests, naming, mocking boundaries, and the framework-specific patterns for xUnit and Vitest/React Testing Library.
+description: Unit-testing guidance for .NET and React covering what to test, how to structure tests, naming, mocking boundaries, deterministic setup, and common xUnit/Vitest plus Testing Library patterns. Use this whenever the user asks to add tests, cover a bug, write a unit test, improve coverage, refactor tests, or review whether test cases are sufficient.
 ---
 
 # Unit Testing Best Practices

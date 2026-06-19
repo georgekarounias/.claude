@@ -1,6 +1,6 @@
 ---
 name: modern-best-practice-dotnet-backend-architecture
-description: Build maintainable .NET backend systems using Clean Architecture, Domain-Driven Design, explicit boundaries, durable jobs, secure APIs, reliable data access, resilient integrations, and enforceable code-quality standards
+description: Backend architecture guidance for .NET APIs, application services, domain boundaries, EF Core data access, jobs, integrations, DTO boundaries, and secure composition roots. Use this whenever designing or reviewing backend structure, choosing where logic belongs, defining layers or modules, shaping API/application boundaries, or preventing architecture drift in .NET systems.
 ---
 
 # Building .NET Backend Systems

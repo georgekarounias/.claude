@@ -1,6 +1,6 @@
 ---
 name: clean-csharp-dotnet
-description: Write and review clean, reliable, secure, and maintainable C# and .NET code following Microsoft best practices
+description: C# and .NET coding conventions for services, handlers, domain logic, APIs, async code, dependency injection, nullability, error handling, logging, and testing. Use this whenever writing or reviewing C# files, refactoring backend logic, fixing analyzer warnings, improving async correctness, or removing unsafe patterns in .NET code.
 ---
 
 # Clean C# and .NET
