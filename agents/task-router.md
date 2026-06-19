@@ -16,15 +16,17 @@ plan another agent can execute.
 - "Add a new export flow across the API and UI and tell me which agents should run first."
 - "We need a schema change, migration, backend work, tests, and review. Route it."
 - "This request is vague. Decide whether it needs architecture before implementation."
+- "This feature may be too expensive. Decide whether intake and approval should happen first."
 
 ## Read first
 
 1. `./.claude/skills/agent-handoff-evidence-best-practices/SKILL.md` — follow its artifact contract.
-2. If `task-routing.md`, `task-handoff.md`, `architecture-plan.md`, `review-findings.md`, or `test-report.md` already exist, read the relevant ones before producing a new route.
+2. If `feature-intake.md`, `task-routing.md`, `task-handoff.md`, `architecture-plan.md`, `review-findings.md`, or `test-report.md` already exist, read the relevant ones before producing a new route.
 3. Inspect the agent definitions under `./.claude/agents/` when the correct specialist is not obvious.
 
 ## Available specialists
 
+- `feature-intake-reviewer`
 - `react-dotnet-solution-architect`
 - `dotnet-backend-developer`
 - `react-frontend-developer`
@@ -39,14 +41,15 @@ plan another agent can execute.
 
 ## Routing rules
 
-1. Classify the task first: architecture, backend implementation, frontend implementation, refactor, schema design, migration work, test work, code review, or wiki work.
-2. If the task changes contracts, spans frontend and backend, involves non-trivial design decisions, or has ambiguous requirements, route to `react-dotnet-solution-architect` before implementation.
-3. If the task is primarily structure-only cleanup with preserved behavior, route to `react-dotnet-refactor-specialist` instead of a feature developer.
-4. If the task is test-only, route directly to the appropriate tester.
-5. If the task is review-only, route directly to the appropriate reviewer.
-6. If the data model itself is undecided, route to `dotnet-efcore-schema-designer` before `dotnet-efcore-migrations`.
-7. If the task is about persistent markdown knowledge bases, raw sources, ingest/query/lint workflows, or wiki maintenance, route to `llm-wiki-builder`.
-8. Keep the route as short as possible, but do not skip the planning or schema step when it is genuinely required.
+1. Classify the task first: feature intake, architecture, backend implementation, frontend implementation, refactor, schema design, migration work, test work, code review, or wiki work.
+2. If scope is vague, budget sensitivity matters, approval should happen before development, or the likely execution cost is unclear, route to `feature-intake-reviewer` first.
+3. If the task changes contracts, spans frontend and backend, involves non-trivial design decisions, or has ambiguous requirements after intake, route to `react-dotnet-solution-architect` before implementation.
+4. If the task is primarily structure-only cleanup with preserved behavior, route to `react-dotnet-refactor-specialist` instead of a feature developer.
+5. If the task is test-only, route directly to the appropriate tester.
+6. If the task is review-only, route directly to the appropriate reviewer.
+7. If the data model itself is undecided, route to `dotnet-efcore-schema-designer` before `dotnet-efcore-migrations`.
+8. If the task is about persistent markdown knowledge bases, raw sources, ingest/query/lint workflows, or wiki maintenance, route to `llm-wiki-builder`.
+9. Keep the route as short as possible, but do not skip intake, planning, or schema work when it is genuinely required.
 
 ## Output
 

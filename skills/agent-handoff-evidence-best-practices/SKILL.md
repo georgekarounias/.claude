@@ -1,6 +1,6 @@
 ---
 name: agent-handoff-evidence-best-practices
-description: Route multi-agent work with durable handoff, review, and test artifacts. Use when a task spans specialists or needs reusable execution evidence beyond chat.
+description: Route multi-agent work with durable intake, handoff, review, and test artifacts. Use when a task spans specialists or needs reusable execution evidence beyond chat.
 ---
 
 # Agent Handoff And Evidence Best Practices
@@ -11,6 +11,7 @@ re-discovery, improve routing quality, and make validation and review auditable.
 Use the following task-level files at the repo root unless the repo already has a
 better established convention:
 
+- `feature-intake.md`
 - `task-routing.md`
 - `task-handoff.md`
 - `review-findings.md`
@@ -19,23 +20,55 @@ better established convention:
 
 ## Example triggers
 
+- "Review this feature first, estimate cost band, and ask for approval before implementation."
 - "Plan the agent sequence for this API and UI change and leave a durable handoff."
 - "Persist the review findings so another agent can fix them later."
 - "Write a test report for the coverage added in this task."
+
+## Templates
+
+Use the template pack under `./.claude/skills/agent-handoff-evidence-best-practices/templates/` when creating new durable coordination artifacts.
+
+Available templates:
+
+- `feature-intake-template.md`
 
 ## Read Order
 
 When these artifacts exist, read them in this order before doing significant work:
 
-1. `task-routing.md`
-2. `architecture-plan.md` or the relevant ADR
-3. `task-handoff.md`
-4. `review-findings.md`
-5. `test-report.md`
+1. `feature-intake.md`
+2. `task-routing.md`
+3. `architecture-plan.md` or the relevant ADR
+4. `task-handoff.md`
+5. `review-findings.md`
+6. `test-report.md`
 
 Do not reread every artifact blindly. Read the smallest relevant set for the task.
 
 ## Artifact Contracts
+
+### `feature-intake.md`
+
+Created by a feature-intake or feasibility gate before broader agentic development begins.
+
+Structure:
+
+- Feature summary
+- Business or user goal
+- In scope
+- Out of scope
+- Open questions
+- Assumptions
+- Acceptance criteria
+- Complexity tier
+- Likely execution mode
+- Likely specialist chain
+- Estimated LLM cost band
+- Main cost drivers
+- Recommendation
+- User validation required
+- Recommended next agent
 
 ### `task-routing.md`
 
@@ -101,13 +134,15 @@ Structure:
 - Distinguish observed facts from assumptions.
 - Record exact commands run whenever validation matters.
 - Never imply a build, test, lint, or review happened if it did not.
+- Never claim exact user credit or quota availability unless the environment exposes it directly.
 - Update the existing artifact instead of creating duplicates when the task is ongoing.
 - Keep artifacts concise and execution-focused.
 - If a file is no longer current, replace outdated sections explicitly rather than letting contradictory notes accumulate.
 
 ## When To Write Artifacts
 
-- Always write `task-routing.md` for non-trivial tasks.
+- Write `feature-intake.md` when scope is vague, budget matters, or approval should happen before broader agentic work starts.
+- Always write `task-routing.md` for non-trivial tasks once the task is approved for development.
 - Write or refresh `task-handoff.md` whenever another agent should continue.
 - Write `review-findings.md` when findings are non-trivial or another agent must fix them.
 - Write `test-report.md` when tests were added, validation was important, or failures/gaps must be preserved.
