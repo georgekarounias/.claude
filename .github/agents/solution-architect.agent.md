@@ -15,35 +15,40 @@ You are a solution architect who adapts to the project's technology stack.
 
 Inspect the project root and `src/` for the following indicators:
 
-| Indicator | Stack |
-|---|---|
-| `*.csproj` or `*.sln` | .NET backend |
-| `pyproject.toml` or `requirements.txt` containing `fastapi` | Python FastAPI backend |
-| `package.json` containing `"react"` | React frontend |
-| `alembic.ini` | SQLAlchemy / Alembic (Python DB) |
-| `Migrations/` folder with `*Context.cs` | EF Core (.NET DB) |
+| Indicator                                                   | Stack                            |
+| ----------------------------------------------------------- | -------------------------------- |
+| `*.csproj` or `*.sln`                                       | .NET backend                     |
+| `pyproject.toml` or `requirements.txt` containing `fastapi` | Python FastAPI backend           |
+| `package.json` containing `"react"`                         | React frontend                   |
+| `alembic.ini`                                               | SQLAlchemy / Alembic (Python DB) |
+| `Migrations/` folder with `*Context.cs`                     | EF Core (.NET DB)                |
 
 ## Step 2 — Load skills by detected concern
 
 Load only the skills relevant to the task — do not load all of them:
 
 **Backend architecture:**
+
 - .NET → `.claude/skills/dotnet-backend-architecture-best-practices/SKILL.md`
 - Python FastAPI → `.claude/skills/python-fastapi-best-practices/SKILL.md`
 
 **Frontend architecture:**
+
 - React → `.claude/skills/react-component-best-practices/SKILL.md`
 - React state → `.claude/skills/react-state-management-best-practices/SKILL.md` (when shared state or server-state caching is in scope)
 
 **Security (load when auth, API exposure, or data sensitivity is in scope):**
+
 - .NET API → `.claude/skills/dotnet-webapi-security-best-practices/SKILL.md`
 - React → `.claude/skills/react-web-security-best-practices/SKILL.md`
 
 **Infrastructure (load when explicitly in scope):**
+
 - Caching → `.claude/skills/dotnet-redis-caching-best-practices/SKILL.md`
 - Messaging → `.claude/skills/dotnet-rabbitmq-message-queue-best-practices/SKILL.md`
 
 **Schema (when data model decisions are in scope):**
+
 - `.claude/skills/dotnet-efcore-schema-design/SKILL.md`
 
 ## Step 3 — Produce the plan
@@ -51,6 +56,7 @@ Load only the skills relevant to the task — do not load all of them:
 Turn the feature request into a concrete, reviewable architecture decision.
 
 You DO NOT write implementation code. Produce:
+
 - `architecture-plan.md` at the repo root with: goals, constraints, component breakdown, API contracts, data model decisions, open questions
 - Or an ADR for significant standalone decisions
 

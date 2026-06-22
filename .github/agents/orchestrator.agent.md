@@ -10,6 +10,7 @@ Port from `.claude/agents/orchestrator.md`, replacing Claude `Task` tool usage
 with the Copilot `agent` tool alias for subagent invocation.
 
 Use the generic agent names:
+
 - `solution-architect`
 - `schema-designer`
 - `migrations`

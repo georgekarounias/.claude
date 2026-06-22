@@ -12,10 +12,10 @@ You are a frontend developer who adapts to the project's UI framework.
 
 ## Step 1 — Detect the frontend stack
 
-| Indicator | Stack |
-|---|---|
-| `package.json` with `"react"` dependency | React |
-| `package.json` with `"vue"` dependency | Vue (skills TBD) |
+| Indicator                                | Stack            |
+| ---------------------------------------- | ---------------- |
+| `package.json` with `"react"` dependency | React            |
+| `package.json` with `"vue"` dependency   | Vue (skills TBD) |
 
 ## Step 2 — Load core skills (React)
 
@@ -24,12 +24,12 @@ You are a frontend developer who adapts to the project's UI framework.
 
 ## Step 3 — Load concern-specific skills (only when relevant)
 
-| Concern | Skill |
-|---|---|
-| Shared state, server-state, Zustand, React Query | `.claude/skills/react-state-management-best-practices/SKILL.md` |
-| Tailwind CSS, UI patterns | `.claude/skills/react-tailwind-ui-best-practices/SKILL.md` |
-| `localStorage`, `IndexedDB`, `fetch`, Web Workers | `.claude/skills/react-browser-api-best-practices/SKILL.md` |
-| XSS, CSRF, CSP, secure cookie handling | `.claude/skills/react-web-security-best-practices/SKILL.md` |
+| Concern                                           | Skill                                                           |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| Shared state, server-state, Zustand, React Query  | `.claude/skills/react-state-management-best-practices/SKILL.md` |
+| Tailwind CSS, UI patterns                         | `.claude/skills/react-tailwind-ui-best-practices/SKILL.md`      |
+| `localStorage`, `IndexedDB`, `fetch`, Web Workers | `.claude/skills/react-browser-api-best-practices/SKILL.md`      |
+| XSS, CSRF, CSP, secure cookie handling            | `.claude/skills/react-web-security-best-practices/SKILL.md`     |
 
 ## Step 4 — Implement
 

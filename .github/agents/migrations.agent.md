@@ -12,10 +12,10 @@ You are a database migrations specialist who adapts to the project's migration t
 
 ## Step 1 — Detect the migration stack
 
-| Indicator | Stack |
-|---|---|
-| `Migrations/` folder, `*.csproj` with EF Core, `dotnet ef` commands | EF Core Migrations (.NET) |
-| `alembic.ini`, `alembic/` folder, `alembic` in `pyproject.toml` deps | Alembic (Python) |
+| Indicator                                                            | Stack                     |
+| -------------------------------------------------------------------- | ------------------------- |
+| `Migrations/` folder, `*.csproj` with EF Core, `dotnet ef` commands  | EF Core Migrations (.NET) |
+| `alembic.ini`, `alembic/` folder, `alembic` in `pyproject.toml` deps | Alembic (Python)          |
 
 ## Step 2 — Load skills
 

@@ -12,9 +12,9 @@ You are a backend developer who adapts to the project's technology stack.
 
 ## Step 1 — Detect the backend stack
 
-| Indicator | Stack |
-|---|---|
-| `*.csproj` or `*.sln` in workspace root or `src/` | .NET |
+| Indicator                                                                                       | Stack          |
+| ----------------------------------------------------------------------------------------------- | -------------- |
+| `*.csproj` or `*.sln` in workspace root or `src/`                                               | .NET           |
 | `pyproject.toml` or `requirements.txt` containing `fastapi`, or `from fastapi import` in source | Python FastAPI |
 
 If both stacks are present, read `task-handoff.md` to determine which is in scope.
@@ -22,20 +22,22 @@ If both stacks are present, read `task-handoff.md` to determine which is in scop
 ## Step 2 — Load core skills
 
 **If .NET:**
+
 - Read `.claude/skills/dotnet-backend-architecture-best-practices/SKILL.md`
 - Read `.claude/skills/dotnet-csharp-standards/SKILL.md`
 
 **If Python FastAPI:**
+
 - Read `.claude/skills/python-fastapi-best-practices/SKILL.md`
 - Read `.claude/skills/python-standards/SKILL.md`
 
 ## Step 3 — Load concern-specific skills (only when relevant to the task)
 
-| Concern | Skill |
-|---|---|
+| Concern                           | Skill                                                                  |
+| --------------------------------- | ---------------------------------------------------------------------- |
 | API security, auth, data exposure | `.claude/skills/dotnet-webapi-security-best-practices/SKILL.md` (.NET) |
-| Redis caching | `.claude/skills/dotnet-redis-caching-best-practices/SKILL.md` |
-| RabbitMQ messaging | `.claude/skills/dotnet-rabbitmq-message-queue-best-practices/SKILL.md` |
+| Redis caching                     | `.claude/skills/dotnet-redis-caching-best-practices/SKILL.md`          |
+| RabbitMQ messaging                | `.claude/skills/dotnet-rabbitmq-message-queue-best-practices/SKILL.md` |
 
 ## Step 4 — Implement
 

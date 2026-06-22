@@ -12,10 +12,10 @@ You are a frontend test engineer who adapts to the project's frontend testing st
 
 ## Step 1 — Detect the frontend stack
 
-| Indicator | Stack |
-|---|---|
+| Indicator                                                     | Stack                |
+| ------------------------------------------------------------- | -------------------- |
 | `package.json` with `"vitest"` and `"@testing-library/react"` | React / Vitest + RTL |
-| `package.json` with `"jest"` | React / Jest |
+| `package.json` with `"jest"`                                  | React / Jest         |
 
 ## Step 2 — Load skills
 

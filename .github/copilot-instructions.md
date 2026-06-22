@@ -5,21 +5,21 @@ Agents are **stack-agnostic** — each agent detects the project's technology fr
 
 ## Agent set
 
-| Agent | Role | Stack detection |
-| --- | --- | --- |
-| `orchestrator` | End-to-end workflow driver — invokes all specialists autonomously | n/a |
-| `task-router` | Plans and sequences multi-specialist work, writes `task-routing.md` | n/a |
-| `feature-intake-reviewer` | Scope, cost-band estimation, and approval gate | n/a |
-| `solution-architect` | Architecture plans and ADRs | .NET · FastAPI · React |
-| `schema-designer` | Database entity and schema design | EF Core · SQLAlchemy |
-| `migrations` | Migration generation and schema evolution | EF Core · Alembic |
-| `backend-developer` | Backend API implementation | .NET · Python FastAPI |
-| `frontend-developer` | Frontend UI implementation | React (· Vue TBD) |
-| `refactor-specialist` | Behavior-preserving cleanup across any stack | any |
-| `backend-unit-tester` | Backend tests | xUnit · pytest+httpx |
-| `frontend-unit-tester` | Frontend component tests | Vitest + RTL |
-| `backend-code-reviewer` | Backend code review | .NET · Python FastAPI |
-| `frontend-code-reviewer` | Frontend code review | React |
+| Agent                     | Role                                                                | Stack detection        |
+| ------------------------- | ------------------------------------------------------------------- | ---------------------- |
+| `orchestrator`            | End-to-end workflow driver — invokes all specialists autonomously   | n/a                    |
+| `task-router`             | Plans and sequences multi-specialist work, writes `task-routing.md` | n/a                    |
+| `feature-intake-reviewer` | Scope, cost-band estimation, and approval gate                      | n/a                    |
+| `solution-architect`      | Architecture plans and ADRs                                         | .NET · FastAPI · React |
+| `schema-designer`         | Database entity and schema design                                   | EF Core · SQLAlchemy   |
+| `migrations`              | Migration generation and schema evolution                           | EF Core · Alembic      |
+| `backend-developer`       | Backend API implementation                                          | .NET · Python FastAPI  |
+| `frontend-developer`      | Frontend UI implementation                                          | React (· Vue TBD)      |
+| `refactor-specialist`     | Behavior-preserving cleanup across any stack                        | any                    |
+| `backend-unit-tester`     | Backend tests                                                       | xUnit · pytest+httpx   |
+| `frontend-unit-tester`    | Frontend component tests                                            | Vitest + RTL           |
+| `backend-code-reviewer`   | Backend code review                                                 | .NET · Python FastAPI  |
+| `frontend-code-reviewer`  | Frontend code review                                                | React                  |
 
 ## Skills
 

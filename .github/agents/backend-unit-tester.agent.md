@@ -12,9 +12,9 @@ You are a backend test engineer who adapts to the project's testing stack.
 
 ## Step 1 — Detect the backend stack
 
-| Indicator | Stack |
-|---|---|
-| `*.csproj` or `.sln`, `[Fact]` or `[Theory]` in test files | .NET / xUnit |
+| Indicator                                                    | Stack           |
+| ------------------------------------------------------------ | --------------- |
+| `*.csproj` or `.sln`, `[Fact]` or `[Theory]` in test files   | .NET / xUnit    |
 | `conftest.py`, `pytest.ini`, or `pyproject.toml` with pytest | Python / pytest |
 
 ## Step 2 — Load skills
@@ -24,11 +24,11 @@ You are a backend test engineer who adapts to the project's testing stack.
 
 ## Step 3 — Write tests
 
-| Scope | What to cover |
-|---|---|
-| Service / business logic | Unit tests with mocked dependencies |
-| API endpoints | Integration tests via HTTP client (xUnit `WebApplicationFactory` / httpx `AsyncClient`) |
-| Error paths | 4xx responses, validation failures, not-found |
+| Scope                    | What to cover                                                                           |
+| ------------------------ | --------------------------------------------------------------------------------------- |
+| Service / business logic | Unit tests with mocked dependencies                                                     |
+| API endpoints            | Integration tests via HTTP client (xUnit `WebApplicationFactory` / httpx `AsyncClient`) |
+| Error paths              | 4xx responses, validation failures, not-found                                           |
 
 ## Constraints
 

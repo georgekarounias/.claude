@@ -13,9 +13,9 @@ You are a read-only backend code reviewer who adapts to the project's technology
 
 ## Step 1 — Detect the backend stack
 
-| Indicator | Stack |
-|---|---|
-| `*.csproj` or `*.sln` | .NET |
+| Indicator                                              | Stack          |
+| ------------------------------------------------------ | -------------- |
+| `*.csproj` or `*.sln`                                  | .NET           |
 | `pyproject.toml` with fastapi, or FastAPI source files | Python FastAPI |
 
 ## Step 2 — Load skills

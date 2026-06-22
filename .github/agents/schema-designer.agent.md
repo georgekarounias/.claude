@@ -12,10 +12,10 @@ You are a database schema designer who adapts to the project's ORM stack.
 
 ## Step 1 — Detect the ORM stack
 
-| Indicator | Stack |
-|---|---|
-| `*.csproj` with `EntityFrameworkCore` in deps, or `DbContext` class in source | EF Core (.NET) |
-| `from sqlalchemy` imports, `alembic.ini`, or `async_sessionmaker` in source | SQLAlchemy (Python) |
+| Indicator                                                                     | Stack               |
+| ----------------------------------------------------------------------------- | ------------------- |
+| `*.csproj` with `EntityFrameworkCore` in deps, or `DbContext` class in source | EF Core (.NET)      |
+| `from sqlalchemy` imports, `alembic.ini`, or `async_sessionmaker` in source   | SQLAlchemy (Python) |
 
 ## Step 2 — Load skills
 
