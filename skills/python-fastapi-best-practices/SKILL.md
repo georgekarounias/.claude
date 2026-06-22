@@ -6,6 +6,7 @@ description: "FastAPI architecture and implementation best practices. Use when b
 # Python FastAPI Best Practices
 
 ## When to Use
+
 - Implementing new FastAPI routers, endpoints, or services
 - Reviewing FastAPI code for architecture and correctness
 - Designing dependency injection chains or lifespan events
@@ -37,6 +38,7 @@ tests/
 ```
 
 When importing across domains, always use explicit module names:
+
 ```python
 from src.auth import constants as auth_constants
 from src.notifications import service as notification_service
@@ -60,6 +62,7 @@ from src.notifications import service as notification_service
 - Separate request schemas (input) from response schemas (output). Never expose ORM models as responses.
 - Use `model_config = ConfigDict(from_attributes=True)` for ORM-to-schema conversion.
 - Create a **custom base model** for app-wide defaults (datetime serialization, timezone, etc.):
+
   ```python
   from zoneinfo import ZoneInfo
   from pydantic import BaseModel, ConfigDict, field_serializer
@@ -75,6 +78,7 @@ from src.notifications import service as notification_service
               return value.strftime("%Y-%m-%dT%H:%M:%S%z")
           return value
   ```
+
 - **Decouple `BaseSettings` by domain** — one `AuthConfig`, one `DatabaseConfig`, etc. A single monolithic settings class becomes unmaintainable.
   ```python
   # src/auth/config.py
@@ -89,6 +93,7 @@ from src.notifications import service as notification_service
 
 - Use `Depends()` for **request validation**, not just service injection. Check DB constraints, auth, ownership inside dependencies.
 - **Chain dependencies** to avoid repetition:
+
   ```python
   async def valid_post_id(post_id: UUID4) -> Mapping:
       post = await service.get_by_id(post_id)
@@ -104,18 +109,19 @@ from src.notifications import service as notification_service
           raise UserNotOwner()
       return post
   ```
+
 - FastAPI **caches dependency results per request** — decompose freely without performance cost.
 - **Prefer `async` dependencies** even when not awaiting: sync deps run in the threadpool; small DI functions don't need that overhead.
 - Use `yield` dependencies for resources with teardown (DB sessions).
 
 ## BackgroundTasks vs Task Queue
 
-| Use `BackgroundTasks` | Use a real task queue (Celery, ARQ) |
-|---|---|
-| Task < 1 second | Task takes seconds or minutes |
-| Failure can be dropped silently | You need retries or dead-letter handling |
-| In-process: send email, log a row | CPU-heavy or needs a separate worker |
-| No scheduling needed | Needs cron, ETA, or rate limiting |
+| Use `BackgroundTasks`             | Use a real task queue (Celery, ARQ)      |
+| --------------------------------- | ---------------------------------------- |
+| Task < 1 second                   | Task takes seconds or minutes            |
+| Failure can be dropped silently   | You need retries or dead-letter handling |
+| In-process: send email, log a row | CPU-heavy or needs a separate worker     |
+| No scheduling needed              | Needs cron, ETA, or rate limiting        |
 
 If you would page someone when the task is lost, use a real queue.
 

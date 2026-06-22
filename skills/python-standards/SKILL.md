@@ -6,6 +6,7 @@ description: "Python language standards and code style for FastAPI projects. Use
 # Python Standards
 
 ## When to Use
+
 - Writing new Python modules, classes, or functions
 - Reviewing Python code for style and standards compliance
 - Onboarding to the Python coding conventions for this project
@@ -13,12 +14,14 @@ description: "Python language standards and code style for FastAPI projects. Use
 ## Standards
 
 ### Type Hints
+
 - All function signatures must have type hints (parameters and return type).
 - Use `from __future__ import annotations` for forward references.
 - Prefer `X | None` over `Optional[X]` (Python 3.10+).
 - Use `list[T]`, `dict[K, V]` built-in generics (Python 3.9+), not `List`, `Dict` from `typing`.
 
 ### Naming Conventions
+
 - Modules and packages: `snake_case`
 - Classes: `PascalCase`
 - Functions, methods, variables: `snake_case`
@@ -26,11 +29,13 @@ description: "Python language standards and code style for FastAPI projects. Use
 - Private members: `_leading_underscore`
 
 ### Imports
+
 - Order: stdlib → third-party → local (separated by blank lines).
 - Use `isort` or `ruff` for automatic ordering.
 - Avoid wildcard imports (`from module import *`).
 
 ### Formatting
+
 - Line length: 88 characters (ruff/Black default).
 - Use **ruff** for both linting and formatting (replaces black, isort, autoflake; supports 600+ lint rules):
   ```sh
@@ -47,15 +52,18 @@ description: "Python language standards and code style for FastAPI projects. Use
 - Use pre-commit hooks with ruff for consistent enforcement.
 
 ### Docstrings
+
 - Public modules, classes, and functions must have docstrings.
 - Use Google-style or NumPy-style consistently across the project.
 
 ### Error Handling
+
 - Never catch bare `except:` — always specify exception type.
 - Raise specific exceptions; avoid `raise Exception("message")`.
 - Use custom exception classes for domain errors.
 
 ### Modern Idioms
+
 - Prefer `pathlib.Path` over `os.path`.
 - Use `dataclasses` or Pydantic models over plain dicts for structured data.
 - Use f-strings for string formatting.

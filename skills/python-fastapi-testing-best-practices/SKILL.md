@@ -6,11 +6,13 @@ description: "Testing best practices for Python FastAPI services. Use when writi
 # Python FastAPI Testing Best Practices
 
 ## When to Use
+
 - Writing new tests for FastAPI endpoints or services
 - Reviewing test quality and coverage for a Python backend
 - Setting up test infrastructure (`conftest.py`, fixtures, DB setup)
 
 ## Stack
+
 - **pytest** + **pytest-asyncio** — async test execution
 - **httpx** `AsyncClient` + `ASGITransport` — endpoint integration tests
 - **pytest-cov** — coverage reporting
@@ -22,6 +24,7 @@ description: "Testing best practices for Python FastAPI services. Use when writi
 Wiring the event loop correctly from the start avoids hard-to-debug errors later.
 
 In `pyproject.toml`:
+
 ```toml
 [tool.pytest.ini_options]
 asyncio_mode = "auto"  # no @pytest.mark.asyncio needed per test
