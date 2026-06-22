@@ -28,19 +28,20 @@ full workflow to completion yourself.
 
 ## Available subagents
 
-| Agent | Role |
-|---|---|
-| `feature-intake-reviewer` | Scope, cost-band estimation, approval gate |
-| `react-dotnet-solution-architect` | Architecture plan, ADR, API contract |
-| `dotnet-efcore-schema-designer` | EF Core entity and relationship design |
-| `dotnet-efcore-migrations` | EF Core migration generation |
-| `dotnet-backend-developer` | .NET Web API implementation |
-| `react-frontend-developer` | React + TypeScript implementation |
+| Agent                              | Role                                           |
+| ---------------------------------- | ---------------------------------------------- |
+| `feature-intake-reviewer`          | Scope, cost-band estimation, approval gate     |
+| `react-dotnet-solution-architect`  | Architecture plan, ADR, API contract           |
+| `dotnet-efcore-schema-designer`    | EF Core entity and relationship design         |
+| `dotnet-efcore-migrations`         | EF Core migration generation                   |
+| `dotnet-backend-developer`         | .NET Web API implementation                    |
+| `react-frontend-developer`         | React + TypeScript implementation              |
 | `react-dotnet-refactor-specialist` | Behavior-preserving cleanup across both stacks |
-| `dotnet-backend-unit-tester` | .NET xUnit tests |
-| `react-frontend-unit-tester` | Vitest / React Testing Library tests |
-| `dotnet-backend-code-reviewer` | Backend code review |
-| `react-frontend-code-reviewer` | Frontend code review |
+| `dotnet-backend-unit-tester`       | .NET xUnit tests                               |
+| `react-frontend-unit-tester`       | Vitest / React Testing Library tests           |
+| `dotnet-backend-code-reviewer`     | Backend code review                            |
+| `react-frontend-code-reviewer`     | Frontend code review                           |
+
 ## Process
 
 ### Step 1 — Intake and plan
