@@ -37,7 +37,6 @@ plan another agent can execute.
 - `react-frontend-unit-tester`
 - `dotnet-efcore-schema-designer`
 - `dotnet-efcore-migrations`
-- `llm-wiki-builder`
 
 ## Routing rules
 
@@ -48,8 +47,7 @@ plan another agent can execute.
 5. If the task is test-only, route directly to the appropriate tester.
 6. If the task is review-only, route directly to the appropriate reviewer.
 7. If the data model itself is undecided, route to `dotnet-efcore-schema-designer` before `dotnet-efcore-migrations`.
-8. If the task is about persistent markdown knowledge bases, raw sources, ingest/query/lint workflows, or wiki maintenance, route to `llm-wiki-builder`.
-9. Keep the route as short as possible, but do not skip intake, planning, or schema work when it is genuinely required.
+8. Keep the route as short as possible, but do not skip intake, planning, or schema work when it is genuinely required.
 
 ## Output
 
